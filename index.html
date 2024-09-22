@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-header">
+      <img src="assets/logo/wsa-logo.svg" alt="logo" />
+      <h1 class="project-title">Image Carousel</h1>
+    </div>
+    <section class="carousel-slides-container">
+      <!-- Carousel Slides with next and previous button -->
+      <div>
+        <button class="prev-btn" onclick="changeSlide(-1)">
+          <img src="assets/icons/arrow-prev.svg" />
+        </button>
+        <img
+          src="./assets/images/slide1.png"
+          alt="slide1"
+          class="carousel-slide"
+          onclick="openPopup()"
+        />
+        <img
+          src="./assets/images/slide2.png"
+          alt="slide2"
+          class="carousel-slide"
+          onclick="openPopup()"
+
+        />
+        <img
+          src="./assets/images/slide3.png"
+          alt="slide3"
+          class="carousel-slide"
+          onclick="openPopup()"
+
+        />
+
+        <button class="next-btn" onclick="changeSlide(1)">
+          <img src="./assets/icons/arrow-next.svg" />
+        </button>
+      </div>
+      <div class="carousel-dots">
+        <span class="dot" onclick="currentSlide()"></span>
+        <span class="dot" onclick="currentSlide()"></span>
+        <span class="dot" onclick="currentSlide()"></span>
+      </div>
+    </section>
+    <p class="copyright-text">&copy; 2024 WSA. All Rifghts Reserved</p>
+
+    <!-- LEVEL 2: Popup view starts for level 2 -->
+    <div id="imagePopup" class="popup">
+      <span class="close" onclick="closePopup()">&times;</span>
+      <div class="popup-content">
+        <img
+          id="popuup-image"
+          src="./assets/images/slide2.png"
+          alt="Enlarged Img"
+        />
+      </div>
+    </div>
+    <!-- LEVEL 2: Completed -->
+
+    <script src="script.js"></script>
+  </body>
+</html>
